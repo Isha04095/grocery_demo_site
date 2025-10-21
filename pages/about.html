@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About FreshCart - Your Trusted Grocery Delivery Partner</title>
+    <meta name="description" content="Learn about FreshCart's mission to deliver fresh groceries in minutes. Discover our story, values, and commitment to quality and convenience.">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Ffreshcart2455back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.9"></script>
+  <script type="module" src="https://static.rocket.new/rocket-shot.js?v=0.0.1"></script>
+  </head>
+<body class="bg-background">
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 bg-white z-50 flex items-center justify-center">
+        <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-primary"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md shadow-subtle z-40 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <svg class="h-10 w-10 text-primary mr-3" viewBox="0 0 40 40" fill="currentColor">
+                        <path d="M20 2L35 10v20L20 38 5 30V10L20 2z"/>
+                        <path d="M15 18h10v2H15zm0 4h10v2H15zm0 4h6v2h-6z" fill="white"/>
+                    </svg>
+                    <span class="text-2xl font-bold text-primary heading-poppins">FreshCart</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="homepage.html" class="text-text-secondary hover:text-primary transition-colors">Home</a>
+                    <a href="products.html" class="text-text-secondary hover:text-primary transition-colors">Products</a>
+                    <a href="offers.html" class="text-text-secondary hover:text-primary transition-colors">Offers</a>
+                    <a href="about.html" class="text-text-primary hover:text-primary transition-colors font-medium">About</a>
+                    <a href="contact.html" class="text-text-secondary hover:text-primary transition-colors">Contact</a>
+                    <button class="btn-primary">
+                        <i class="fas fa-shopping-cart mr-2"></i>Cart (0)
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-white border-t border-border-light transform -translate-y-full opacity-0 transition-all duration-300">
+            <div class="px-4 py-4 space-y-4">
+                <a href="homepage.html" class="block text-text-secondary hover:text-primary transition-colors">Home</a>
+                <a href="products.html" class="block text-text-secondary hover:text-primary transition-colors">Products</a>
+                <a href="offers.html" class="block text-text-secondary hover:text-primary transition-colors">Offers</a>
+                <a href="about.html" class="block text-text-primary hover:text-primary transition-colors font-medium">About</a>
+                <a href="contact.html" class="block text-text-secondary hover:text-primary transition-colors">Contact</a>
+                <button class="btn-primary w-full mt-4">
+                    <i class="fas fa-shopping-cart mr-2"></i>Cart (0)
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1644501810962-3a7428e1df93" 
+                 alt="Modern grocery warehouse with fresh produce and delivery team" 
+                 class="w-full h-full object-cover"
+                 onerror="this.src='https://images.pexels.com/photos/4481259/pexels-photo-4481259.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+            <div class="absolute inset-0 bg-black/50"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 heading-poppins animate-fade-in">
+                    Redefining 
+                    <span class="text-primary">Grocery</span> 
+                    Delivery
+                </h1>
+                <p class="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
+                    We're on a mission to bring fresh, quality groceries to your doorstep in minutes, not hours. 
+                    Because your time matters, and quality should never be compromised.
+                </p>
+
+                <!-- Trust Metrics -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                        <div class="text-3xl font-bold text-primary mb-2">12min</div>
+                        <div class="text-white/80 text-sm">Average Delivery</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                        <div class="text-3xl font-bold text-primary mb-2">50K+</div>
+                        <div class="text-white/80 text-sm">Happy Customers</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                        <div class="text-3xl font-bold text-primary mb-2">99.8%</div>
+                        <div class="text-white/80 text-sm">Quality Rating</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                        <div class="text-3xl font-bold text-primary mb-2">24/7</div>
+                        <div class="text-white/80 text-sm">Customer Support</div>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="products.html" class="btn-primary text-lg px-8 py-4 inline-flex items-center">
+                        <i class="fas fa-shopping-bag mr-3"></i>Start Shopping
+                    </a>
+                    <a href="contact.html" class="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/30 transition-all inline-flex items-center">
+                        <i class="fas fa-map-marker-alt mr-3"></i>Check Service Area
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-white text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Story Content -->
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-bold text-text-primary mb-6 heading-poppins">Our Story</h2>
+                    <p class="text-xl text-text-secondary mb-6">
+                        Founded in 2023 by a team of passionate entrepreneurs who believed that grocery shopping shouldn't be a time-consuming chore, FreshCart was born from a simple idea: what if fresh groceries could reach your doorstep faster than a pizza?
+                    </p>
+                    <p class="text-lg text-text-secondary mb-8">
+                        We started with a single warehouse and a vision to revolutionize how people access fresh food. Today, we're proud to serve thousands of families across the city, maintaining our commitment to quality, speed, and exceptional service.
+                    </p>
+
+                    <!-- Mission Statement -->
+                    <div class="bg-primary-50 rounded-2xl p-8 mb-8">
+                        <h3 class="text-2xl font-bold text-text-primary mb-4 heading-poppins">Our Mission</h3>
+                        <p class="text-text-secondary text-lg">
+                            To make fresh, quality groceries accessible to everyone through ultra-fast delivery, 
+                            empowering people to spend more time on what matters most to them.
+                        </p>
+                    </div>
+
+                    <!-- Values -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex items-start">
+                            <div class="bg-primary p-3 rounded-full mr-4 flex-shrink-0">
+                                <i class="fas fa-bolt text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-text-primary mb-2">Speed</h4>
+                                <p class="text-text-secondary text-sm">Lightning-fast delivery without compromising quality</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-success p-3 rounded-full mr-4 flex-shrink-0">
+                                <i class="fas fa-leaf text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-text-primary mb-2">Freshness</h4>
+                                <p class="text-text-secondary text-sm">Only the freshest produce makes it to your door</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-accent p-3 rounded-full mr-4 flex-shrink-0">
+                                <i class="fas fa-shield-alt text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-text-primary mb-2">Trust</h4>
+                                <p class="text-text-secondary text-sm">Reliable service you can count on, every time</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-secondary p-3 rounded-full mr-4 flex-shrink-0">
+                                <i class="fas fa-heart text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-text-primary mb-2">Care</h4>
+                                <p class="text-text-secondary text-sm">Every order handled with personal attention</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Founder Image -->
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1690192078982-d3d2f89059ee" 
+                         alt="FreshCart founders and team members in modern office setting" 
+                         class="w-full h-96 object-cover rounded-2xl shadow-elevated"
+                         onerror="this.src='https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                    <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-elevated">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-primary">2023</div>
+                            <div class="text-text-secondary text-sm">Founded</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Area & Expansion -->
+    <section class="py-20 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-text-primary mb-6 heading-poppins">Where We Deliver</h2>
+                <p class="text-xl text-text-secondary max-w-2xl mx-auto">Currently serving major metropolitan areas with plans for rapid expansion</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Map Placeholder -->
+                <div class="relative">
+                    <div class="bg-white rounded-2xl p-8 shadow-elevated">
+                        <img src="https://images.unsplash.com/photo-1623875143206-ea374471ba17" 
+                             alt="Service area map showing delivery zones and coverage areas" 
+                             class="w-full h-80 object-cover rounded-xl mb-6"
+                             onerror="this.src='https://images.pixabay.com/photo/2018/05/08/21/29/earth-3384343_1280.jpg'; this.onerror=null;">
+                        <div class="text-center">
+                            <h3 class="text-2xl font-bold text-text-primary mb-2">Current Coverage</h3>
+                            <p class="text-text-secondary">Downtown, Midtown, Uptown & Suburban Areas</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Expansion Timeline -->
+                <div>
+                    <h3 class="text-3xl font-bold text-text-primary mb-8 heading-poppins">Expansion Timeline</h3>
+                    
+                    <div class="space-y-8">
+                        <!-- Current -->
+                        <div class="flex items-start">
+                            <div class="bg-primary p-3 rounded-full mr-6 flex-shrink-0">
+                                <i class="fas fa-check text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-text-primary mb-2">2023 - Launch</h4>
+                                <p class="text-text-secondary">Started operations in downtown core with 5,000+ products</p>
+                            </div>
+                        </div>
+
+                        <!-- Q1 2024 -->
+                        <div class="flex items-start">
+                            <div class="bg-primary p-3 rounded-full mr-6 flex-shrink-0">
+                                <i class="fas fa-check text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-text-primary mb-2">Q1 2024 - Expansion</h4>
+                                <p class="text-text-secondary">Extended to suburban areas, added organic and specialty items</p>
+                            </div>
+                        </div>
+
+                        <!-- Q3 2024 -->
+                        <div class="flex items-start">
+                            <div class="bg-accent p-3 rounded-full mr-6 flex-shrink-0">
+                                <i class="fas fa-clock text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-text-primary mb-2">Q3 2024 - Coming Soon</h4>
+                                <p class="text-text-secondary">Neighboring cities and 24/7 delivery service</p>
+                            </div>
+                        </div>
+
+                        <!-- 2025 -->
+                        <div class="flex items-start">
+                            <div class="bg-secondary p-3 rounded-full mr-6 flex-shrink-0">
+                                <i class="fas fa-rocket text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-text-primary mb-2">2025 - Vision</h4>
+                                <p class="text-text-secondary">Regional coverage with same-day delivery guarantee</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="contact.html" class="btn-primary inline-flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i>Check Your Area
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality & Sourcing -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-text-primary mb-6 heading-poppins">Quality You Can Trust</h2>
+                <p class="text-xl text-text-secondary max-w-2xl mx-auto">We partner with the best suppliers to ensure every product meets our high standards</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <!-- Local Farms -->
+                <div class="bg-success-50 rounded-2xl p-8 text-center">
+                    <img src="https://images.unsplash.com/photo-1602692875228-a2f382599d65" 
+                         alt="Local organic farm with fresh vegetables and sustainable farming practices" 
+                         class="w-full h-48 object-cover rounded-xl mb-6"
+                         onerror="this.src='https://images.pexels.com/photos/1459339/pexels-photo-1459339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                    <h3 class="text-2xl font-bold text-text-primary mb-4">Local Partnerships</h3>
+                    <p class="text-text-secondary">Direct relationships with 50+ local farms ensuring the freshest produce reaches you within hours of harvest.</p>
+                </div>
+
+                <!-- Quality Control -->
+                <div class="bg-accent-50 rounded-2xl p-8 text-center">
+                    <img src="https://images.unsplash.com/photo-1602631510603-2b4f879ce112" 
+                         alt="Quality control specialist inspecting fresh produce in modern facility" 
+                         class="w-full h-48 object-cover rounded-xl mb-6"
+                         onerror="this.src='https://images.pixabay.com/photo/2016/11/30/15/00/workplace-1873191_1280.jpg'; this.onerror=null;">
+                    <h3 class="text-2xl font-bold text-text-primary mb-4">Rigorous Testing</h3>
+                    <p class="text-text-secondary">Every batch undergoes comprehensive quality checks including freshness, safety, and nutritional standards.</p>
+                </div>
+
+                <!-- Cold Chain -->
+                <div class="bg-primary-50 rounded-2xl p-8 text-center">
+                    <img src="https://images.unsplash.com/photo-1695653422952-93bf055732fe" 
+                         alt="Temperature-controlled delivery vehicle maintaining cold chain for fresh groceries" 
+                         class="w-full h-48 object-cover rounded-xl mb-6"
+                         onerror="this.src='https://images.pexels.com/photos/4481259/pexels-photo-4481259.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                    <h3 class="text-2xl font-bold text-text-primary mb-4">Cold Chain Integrity</h3>
+                    <p class="text-text-secondary">Temperature-controlled storage and delivery vehicles maintain optimal conditions from warehouse to your door.</p>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="bg-background rounded-2xl p-8">
+                <h3 class="text-3xl font-bold text-text-primary text-center mb-8 heading-poppins">Our Certifications</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div class="flex flex-col items-center">
+                        <div class="bg-success p-4 rounded-full mb-4">
+                            <i class="fas fa-certificate text-white text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-text-primary mb-2">USDA Organic</h4>
+                        <p class="text-text-secondary text-sm">Certified organic products</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="bg-accent p-4 rounded-full mb-4">
+                            <i class="fas fa-shield-alt text-white text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-text-primary mb-2">Food Safety</h4>
+                        <p class="text-text-secondary text-sm">HACCP compliant facility</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="bg-primary p-4 rounded-full mb-4">
+                            <i class="fas fa-leaf text-white text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-text-primary mb-2">Sustainable</h4>
+                        <p class="text-text-secondary text-sm">Eco-friendly practices</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="bg-secondary p-4 rounded-full mb-4">
+                            <i class="fas fa-award text-white text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-text-primary mb-2">ISO 9001</h4>
+                        <p class="text-text-secondary text-sm">Quality management</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-20 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-text-primary mb-6 heading-poppins">Meet Our Team</h2>
+                <p class="text-xl text-text-secondary max-w-2xl mx-auto">The passionate people behind FreshCart's success</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Team Member 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-subtle hover:shadow-elevated transition-all duration-300 text-center">
+                    <img src="https://images.unsplash.com/photo-1655562663442-969c9f241e15" 
+                         alt="Alex Thompson, CEO and Co-founder of FreshCart" 
+                         class="w-24 h-24 rounded-full object-cover mx-auto mb-6"
+                         onerror="this.src='https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                    <h3 class="text-xl font-bold text-text-primary mb-2">Alex Thompson</h3>
+                    <p class="text-primary font-semibold mb-4">CEO & Co-founder</p>
+                    <p class="text-text-secondary text-sm mb-4">Former logistics executive with 15 years of experience in supply chain optimization and e-commerce operations.</p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="javascript:void(0)" class="text-accent hover:text-accent-600 transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="javascript:void(0)" class="text-accent hover:text-accent-600 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-subtle hover:shadow-elevated transition-all duration-300 text-center">
+                    <img src="https://images.unsplash.com/photo-1508609504209-a18ae83c6be9" 
+                         alt="Sarah Martinez, CTO and Co-founder of FreshCart" 
+                         class="w-24 h-24 rounded-full object-cover mx-auto mb-6"
+                         onerror="this.src='https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                    <h3 class="text-xl font-bold text-text-primary mb-2">Sarah Martinez</h3>
+                    <p class="text-primary font-semibold mb-4">CTO & Co-founder</p>
+                    <p class="text-text-secondary text-sm mb-4">Tech innovator specializing in mobile applications and real-time logistics systems with a passion for user experience.</p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="javascript:void(0)" class="text-accent hover:text-accent-600 transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="javascript:void(0)" class="text-accent hover:text-accent-600 transition-colors">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-subtle hover:shadow-elevated transition-all duration-300 text-center">
+                    <img src="https://images.unsplash.com/photo-1726661482220-bd9f21f9832d" 
+                         alt="David Chen, Head of Operations at FreshCart" 
+                         class="w-24 h-24 rounded-full object-cover mx-auto mb-6"
+                         onerror="this.src='https://images.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg'; this.onerror=null;">
+                    <h3 class="text-xl font-bold text-text-primary mb-2">David Chen</h3>
+                    <p class="text-primary font-semibold mb-4">Head of Operations</p>
+                    <p class="text-text-secondary text-sm mb-4">Operations expert ensuring seamless delivery experiences with a background in food safety and quality management.</p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="javascript:void(0)" class="text-accent hover:text-accent-600 transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="javascript:void(0)" class="text-accent hover:text-accent-600 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Testimonials -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-text-primary mb-6 heading-poppins">What Our Customers Say</h2>
+                <p class="text-xl text-text-secondary max-w-2xl mx-auto">Real experiences from real customers who trust FreshCart</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-background rounded-2xl p-8 shadow-subtle hover:shadow-elevated transition-all duration-300">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1661105308116-ca980c3c357e" 
+                             alt="Emma Rodriguez, satisfied FreshCart customer" 
+                             class="w-16 h-16 rounded-full object-cover mr-4"
+                             onerror="this.src='https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        <div>
+                            <h4 class="font-semibold text-text-primary">Emma Rodriguez</h4>
+                            <p class="text-text-secondary text-sm">Health Enthusiast</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-text-secondary italic">"The organic selection is incredible and everything arrives perfectly fresh. The quality guarantee gives me complete confidence in every order. This service has transformed how I shop for groceries!"</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-background rounded-2xl p-8 shadow-subtle hover:shadow-elevated transition-all duration-300">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1690022637475-c9bc193f9e43" 
+                             alt="Michael Chen, satisfied FreshCart customer" 
+                             class="w-16 h-16 rounded-full object-cover mr-4"
+                             onerror="this.src='https://images.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg'; this.onerror=null;">
+                        <div>
+                            <h4 class="font-semibold text-text-primary">Michael Chen</h4>
+                            <p class="text-text-secondary text-sm">Tech Professional</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-text-secondary italic">"As someone who works long hours, FreshCart is a lifesaver. The app is intuitive, delivery tracking is accurate, and I can get fresh ingredients delivered before I even get home. Absolutely brilliant!"</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-background rounded-2xl p-8 shadow-subtle hover:shadow-elevated transition-all duration-300">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1690022637475-c9bc193f9e43" 
+                             alt="Sarah Johnson, satisfied FreshCart customer" 
+                             class="w-16 h-16 rounded-full object-cover mr-4"
+                             onerror="this.src='https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        <div>
+                            <h4 class="font-semibold text-text-primary">Sarah Johnson</h4>
+                            <p class="text-text-secondary text-sm">Working Mom</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-text-secondary italic">"FreshCart has been a game-changer for our family. The 12-minute delivery is incredible, and the produce quality is consistently excellent. Perfect for busy weekdays when time is precious."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainability & Community -->
+    <section class="py-20 bg-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 heading-poppins">Our Commitment</h2>
+                <p class="text-xl text-white/90 max-w-2xl mx-auto">Building a sustainable future while supporting our local community</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Sustainability -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-white/20 p-4 rounded-full mr-4">
+                            <i class="fas fa-leaf text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white heading-poppins">Sustainability</h3>
+                    </div>
+                    <ul class="space-y-4 text-white/90">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-white mr-3 mt-1"></i>
+                            <span>100% recyclable packaging materials</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-white mr-3 mt-1"></i>
+                            <span>Electric delivery fleet reducing carbon footprint</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-white mr-3 mt-1"></i>
+                            <span>Zero food waste initiative with local food banks</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-white mr-3 mt-1"></i>
+                            <span>Solar-powered warehouse operations</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Community -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-white/20 p-4 rounded-full mr-4">
+                            <i class="fas fa-hands-helping text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white heading-poppins">Community</h3>
+                    </div>
+                    <ul class="space-y-4 text-white/90">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-white mr-3 mt-1"></i>
+                            <span>Supporting 50+ local farms and suppliers</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-white mr-3 mt-1"></i>
+                            <span>Creating 200+ local jobs in our community</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-white mr-3 mt-1"></i>
+                            <span>Monthly donations to local food assistance programs</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-white mr-3 mt-1"></i>
+                            <span>Educational partnerships with nutrition programs</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-background">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-text-primary mb-6 heading-poppins">Ready to Experience FreshCart?</h2>
+            <p class="text-xl text-text-secondary mb-8 max-w-2xl mx-auto">Join thousands of satisfied customers who trust us for their grocery needs</p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                <a href="products.html" class="btn-primary text-lg px-8 py-4 inline-flex items-center">
+                    <i class="fas fa-shopping-bag mr-3"></i>Start Shopping Now
+                </a>
+                <a href="contact.html" class="btn-secondary text-lg px-8 py-4 inline-flex items-center">
+                    <i class="fas fa-phone mr-3"></i>Contact Us
+                </a>
+            </div>
+
+            <p class="text-text-secondary">
+                <i class="fas fa-shield-alt mr-2 text-primary"></i>
+                100% satisfaction guarantee • Free delivery on orders over $35
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <!-- Company Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <svg class="h-10 w-10 text-primary mr-3" viewBox="0 0 40 40" fill="currentColor">
+                            <path d="M20 2L35 10v20L20 38 5 30V10L20 2z"/>
+                            <path d="M15 18h10v2H15zm0 4h10v2H15zm0 4h6v2h-6z" fill="white"/>
+                        </svg>
+                        <span class="text-2xl font-bold text-primary heading-poppins">FreshCart</span>
+                    </div>
+                    <p class="text-white/80 mb-6 max-w-md">
+                        Your trusted partner for ultra-fast grocery delivery. Fresh, quality groceries delivered to your doorstep in minutes.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="bg-white/10 p-3 rounded-full hover:bg-white/20 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="javascript:void(0)" class="bg-white/10 p-3 rounded-full hover:bg-white/20 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="javascript:void(0)" class="bg-white/10 p-3 rounded-full hover:bg-white/20 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="javascript:void(0)" class="bg-white/10 p-3 rounded-full hover:bg-white/20 transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-semibold text-white mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="homepage.html" class="text-white/80 hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="products.html" class="text-white/80 hover:text-primary transition-colors">Products</a></li>
+                        <li><a href="offers.html" class="text-white/80 hover:text-primary transition-colors">Offers</a></li>
+                        <li><a href="about.html" class="text-white/80 hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="text-white/80 hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h3 class="font-semibold text-white mb-6">Support</h3>
+                    <ul class="space-y-3">
+                        <li><a href="javascript:void(0)" class="text-white/80 hover:text-primary transition-colors">Help Center</a></li>
+                        <li><a href="javascript:void(0)" class="text-white/80 hover:text-primary transition-colors">Delivery Info</a></li>
+                        <li><a href="javascript:void(0)" class="text-white/80 hover:text-primary transition-colors">Return Policy</a></li>
+                        <li><a href="javascript:void(0)" class="text-white/80 hover:text-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="javascript:void(0)" class="text-white/80 hover:text-primary transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/20 pt-8 text-center">
+                <p class="text-white/80">© 2025 FreshCart. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white p-4 rounded-full shadow-elevated hover:bg-primary-600 transition-all duration-300 opacity-0 invisible">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        // Preloader
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0';
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 300);
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            const isOpen = mobileMenu.style.transform === 'translateY(0px)';
+            
+            if (isOpen) {
+                mobileMenu.style.transform = 'translateY(-100%)';
+                mobileMenu.style.opacity = '0';
+            } else {
+                mobileMenu.style.transform = 'translateY(0px)';
+                mobileMenu.style.opacity = '1';
+            }
+        });
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                navbar.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-elevated');
+            } else {
+                navbar.classList.remove('shadow-elevated');
+            }
+        });
+
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+                backToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+                backToTopBtn.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.card, .group, section > div').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(el);
+        });
+
+        // Counter Animation
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            
+            function updateCounter() {
+                start += increment;
+                if (start < target) {
+                    element.textContent = Math.floor(start);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target;
+                }
+            }
+            
+            updateCounter();
+        }
+
+        // Trigger counter animations when metrics section is visible
+        const metricsObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.text-3xl');
+                    counters.forEach(counter => {
+                        const text = counter.textContent;
+                        if (text.includes('50K')) {
+                            animateCounter(counter, 50000);
+                            counter.textContent = '50K+';
+                        } else if (text.includes('99.8')) {
+                            animateCounter(counter, 99.8);
+                            counter.textContent = '99.8%';
+                        }
+                    });
+                    metricsObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        const metricsSection = document.querySelector('.grid.grid-cols-2.md\\:grid-cols-4.gap-6.mb-12');
+        if (metricsSection) {
+            metricsObserver.observe(metricsSection);
+        }
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>

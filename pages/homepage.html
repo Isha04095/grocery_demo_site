@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshCart - Groceries at your doorstep in minutes</title>
+    <meta name="description" content="Get fresh groceries delivered to your doorstep in minutes. FreshCart offers ultra-fast delivery with quality guarantee. Order now!">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Ffreshcart2455back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.9"></script>
+  <script type="module" src="https://static.rocket.new/rocket-shot.js?v=0.0.1"></script>
+  </head>
+<body class="bg-background">
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 bg-white z-50 flex items-center justify-center">
+        <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-primary"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md shadow-subtle z-40 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <svg class="h-10 w-10 text-primary mr-3" viewBox="0 0 40 40" fill="currentColor">
+                        <path d="M20 2L35 10v20L20 38 5 30V10L20 2z"/>
+                        <path d="M15 18h10v2H15zm0 4h10v2H15zm0 4h6v2h-6z" fill="white"/>
+                    </svg>
+                    <span class="text-2xl font-bold text-primary heading-poppins">FreshCart</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="homepage.html" class="text-text-primary hover:text-primary transition-colors font-medium">Home</a>
+                    <a href="products.html" class="text-text-secondary hover:text-primary transition-colors">Products</a>
+                    <a href="offers.html" class="text-text-secondary hover:text-primary transition-colors">Offers</a>
+                    <a href="about.html" class="text-text-secondary hover:text-primary transition-colors">About</a>
+                    <a href="contact.html" class="text-text-secondary hover:text-primary transition-colors">Contact</a>
+                    <button class="btn-primary">
+                        <i class="fas fa-shopping-cart mr-2"></i>Cart (0)
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-white border-t border-border-light transform -translate-y-full opacity-0 transition-all duration-300">
+            <div class="px-4 py-4 space-y-4">
+                <a href="homepage.html" class="block text-text-primary hover:text-primary transition-colors font-medium">Home</a>
+                <a href="products.html" class="block text-text-secondary hover:text-primary transition-colors">Products</a>
+                <a href="offers.html" class="block text-text-secondary hover:text-primary transition-colors">Offers</a>
+                <a href="about.html" class="block text-text-secondary hover:text-primary transition-colors">About</a>
+                <a href="contact.html" class="block text-text-secondary hover:text-primary transition-colors">Contact</a>
+                <button class="btn-primary w-full mt-4">
+                    <i class="fas fa-shopping-cart mr-2"></i>Cart (0)
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1637061346726-697e2cc407b6" 
+                 alt="Fresh groceries and vegetables background" 
+                 class="w-full h-full object-cover"
+                 onerror="this.src='https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+            <div class="absolute inset-0 bg-black/40"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 heading-poppins animate-fade-in">
+                    Groceries at your doorstep in 
+                    <span class="text-primary">minutes</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
+                    Fresh, quality groceries delivered ultra-fast. No compromise on quality, maximum convenience for your busy lifestyle.
+                </p>
+
+                <!-- Search Bar -->
+                <div class="max-w-2xl mx-auto mb-8">
+                    <div class="relative">
+                        <input type="text" 
+                               placeholder="Search for groceries, fruits, vegetables..." 
+                               class="w-full px-6 py-4 pr-16 rounded-xl text-lg border-0 shadow-elevated focus:ring-4 focus:ring-primary-200 transition-all">
+                        <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary-600 transition-colors">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                    <a href="products.html" class="btn-primary text-lg px-8 py-4 inline-flex items-center">
+                        <i class="fas fa-shopping-bag mr-3"></i>Shop Now
+                    </a>
+                    <button class="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/30 transition-all inline-flex items-center">
+                        <i class="fas fa-mobile-alt mr-3"></i>Download App
+                    </button>
+                </div>
+
+                <!-- Delivery Zone Checker -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 max-w-md mx-auto">
+                    <h3 class="text-white font-semibold mb-4">Check if we deliver to your area</h3>
+                    <div class="flex gap-2">
+                        <input type="text" 
+                               placeholder="Enter ZIP code" 
+                               class="flex-1 px-4 py-2 rounded-lg border-0 focus:ring-2 focus:ring-primary">
+                        <button class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary-600 transition-colors">
+                            Check
+                        </button>
+                    </div>
+                    <p class="text-white/80 text-sm mt-2">
+                        <i class="fas fa-clock mr-1"></i>Average delivery time: <span class="font-semibold text-primary">12 minutes</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-white text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="flex flex-col items-center">
+                    <div class="bg-primary-50 p-4 rounded-full mb-4">
+                        <i class="fas fa-bolt text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-text-primary mb-2">Ultra-Fast Delivery</h3>
+                    <p class="text-text-secondary text-sm">Average 12 minutes</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="bg-success-50 p-4 rounded-full mb-4">
+                        <i class="fas fa-leaf text-success text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-text-primary mb-2">Fresh Quality</h3>
+                    <p class="text-text-secondary text-sm">100% freshness guarantee</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="bg-accent-50 p-4 rounded-full mb-4">
+                        <i class="fas fa-shield-alt text-accent text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-text-primary mb-2">Secure Payments</h3>
+                    <p class="text-text-secondary text-sm">SSL encrypted checkout</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="bg-secondary-50 p-4 rounded-full mb-4">
+                        <i class="fas fa-headset text-secondary text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-text-primary mb-2">24/7 Support</h3>
+                    <p class="text-text-secondary text-sm">Always here to help</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-20 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-text-primary mb-6 heading-poppins">Shop by Category</h2>
+                <p class="text-xl text-text-secondary max-w-2xl mx-auto">Discover fresh groceries across all your favorite categories</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <!-- Fruits & Vegetables -->
+                <div class="group cursor-pointer">
+                    <div class="bg-white rounded-2xl p-6 shadow-subtle hover:shadow-elevated transition-all duration-300 group-hover:-translate-y-2">
+                        <div class="aspect-square mb-4 overflow-hidden rounded-xl">
+                            <img src="https://images.unsplash.com/photo-1638996692231-5de5408477f2" 
+                                 alt="Fresh fruits and vegetables" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                                 onerror="this.src='https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        </div>
+                        <h3 class="font-semibold text-text-primary text-center">Fruits & Vegetables</h3>
+                    </div>
+                </div>
+
+                <!-- Dairy & Eggs -->
+                <div class="group cursor-pointer">
+                    <div class="bg-white rounded-2xl p-6 shadow-subtle hover:shadow-elevated transition-all duration-300 group-hover:-translate-y-2">
+                        <div class="aspect-square mb-4 overflow-hidden rounded-xl">
+                            <img src="https://images.unsplash.com/photo-1666542684506-148e57f34dcf" 
+                                 alt="Dairy products and eggs" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                                 onerror="this.src='https://images.pixabay.com/photo/2016/12/06/18/27/milk-1887234_1280.jpg'; this.onerror=null;">
+                        </div>
+                        <h3 class="font-semibold text-text-primary text-center">Dairy & Eggs</h3>
+                    </div>
+                </div>
+
+                <!-- Meat & Seafood -->
+                <div class="group cursor-pointer">
+                    <div class="bg-white rounded-2xl p-6 shadow-subtle hover:shadow-elevated transition-all duration-300 group-hover:-translate-y-2">
+                        <div class="aspect-square mb-4 overflow-hidden rounded-xl">
+                            <img src="https://images.unsplash.com/photo-1674846140289-67566b5301a2" 
+                                 alt="Fresh meat and seafood" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                                 onerror="this.src='https://images.pexels.com/photos/248444/pexels-photo-248444.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        </div>
+                        <h3 class="font-semibold text-text-primary text-center">Meat & Seafood</h3>
+                    </div>
+                </div>
+
+                <!-- Bakery -->
+                <div class="group cursor-pointer">
+                    <div class="bg-white rounded-2xl p-6 shadow-subtle hover:shadow-elevated transition-all duration-300 group-hover:-translate-y-2">
+                        <div class="aspect-square mb-4 overflow-hidden rounded-xl">
+                            <img src="https://images.unsplash.com/photo-1604908552986-eb22824b2150" 
+                                 alt="Fresh bakery items and bread" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                                 onerror="this.src='https://images.pixabay.com/photo/2014/12/11/02/55/bread-563593_1280.jpg'; this.onerror=null;">
+                        </div>
+                        <h3 class="font-semibold text-text-primary text-center">Bakery</h3>
+                    </div>
+                </div>
+
+                <!-- Beverages -->
+                <div class="group cursor-pointer">
+                    <div class="bg-white rounded-2xl p-6 shadow-subtle hover:shadow-elevated transition-all duration-300 group-hover:-translate-y-2">
+                        <div class="aspect-square mb-4 overflow-hidden rounded-xl">
+                            <img src="https://images.unsplash.com/photo-1647449652137-de21e0de6593" 
+                                 alt="Various beverages and drinks" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                                 onerror="this.src='https://images.pexels.com/photos/544961/pexels-photo-544961.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        </div>
+                        <h3 class="font-semibold text-text-primary text-center">Beverages</h3>
+                    </div>
+                </div>
+
+                <!-- Snacks -->
+                <div class="group cursor-pointer">
+                    <div class="bg-white rounded-2xl p-6 shadow-subtle hover:shadow-elevated transition-all duration-300 group-hover:-translate-y-2">
+                        <div class="aspect-square mb-4 overflow-hidden rounded-xl">
+                            <img src="https://images.unsplash.com/photo-1629880273592-6ab7c789031f" 
+                                 alt="Healthy snacks and nuts" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                                 onerror="this.src='https://images.pixabay.com/photo/2016/12/10/21/26/food-1898194_1280.jpg'; this.onerror=null;">
+                        </div>
+                        <h3 class="font-semibold text-text-primary text-center">Snacks</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="products.html" class="btn-primary text-lg px-8 py-4 inline-flex items-center">
+                    View All Categories <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-text-primary mb-6 heading-poppins">Today's Deals</h2>
+                <p class="text-xl text-text-secondary max-w-2xl mx-auto">Fresh picks at unbeatable prices - limited time offers!</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-2xl shadow-subtle hover:shadow-elevated transition-all duration-300 overflow-hidden group">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1678998645565-c60f0b5b1119" 
+                             alt="Fresh organic bananas" 
+                             class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                             onerror="this.src='https://images.pexels.com/photos/2872755/pexels-photo-2872755.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        <div class="absolute top-4 left-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            20% OFF
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-text-primary mb-2">Organic Bananas</h3>
+                        <p class="text-text-secondary text-sm mb-4">Fresh, ripe organic bananas - 1 dozen</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-primary">$3.99</span>
+                                <span class="text-text-secondary line-through">$4.99</span>
+                            </div>
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <span class="text-text-secondary ml-1">4.8</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-primary-600 transition-colors">
+                            <i class="fas fa-plus mr-2"></i>Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-white rounded-2xl shadow-subtle hover:shadow-elevated transition-all duration-300 overflow-hidden group">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1508605714925-4af22faa7959" 
+                             alt="Fresh whole milk" 
+                             class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                             onerror="this.src='https://images.pixabay.com/photo/2016/12/06/18/27/milk-1887234_1280.jpg'; this.onerror=null;">
+                        <div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            FRESH
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-text-primary mb-2">Whole Milk</h3>
+                        <p class="text-text-secondary text-sm mb-4">Farm fresh whole milk - 1 gallon</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-primary">$4.49</span>
+                            </div>
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <span class="text-text-secondary ml-1">4.9</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-primary-600 transition-colors">
+                            <i class="fas fa-plus mr-2"></i>Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-white rounded-2xl shadow-subtle hover:shadow-elevated transition-all duration-300 overflow-hidden group">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1646406535610-20df099030a0" 
+                             alt="Fresh sourdough bread" 
+                             class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                             onerror="this.src='https://images.pexels.com/photos/209206/pexels-photo-209206.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        <div class="absolute top-4 left-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            NEW
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-text-primary mb-2">Sourdough Bread</h3>
+                        <p class="text-text-secondary text-sm mb-4">Artisan sourdough bread - freshly baked</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-primary">$5.99</span>
+                            </div>
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <span class="text-text-secondary ml-1">4.7</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-primary-600 transition-colors">
+                            <i class="fas fa-plus mr-2"></i>Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="bg-white rounded-2xl shadow-subtle hover:shadow-elevated transition-all duration-300 overflow-hidden group">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1670650850872-652ed66a9097" 
+                             alt="Fresh mixed salad greens" 
+                             class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                             onerror="this.src='https://images.pixabay.com/photo/2017/05/11/19/20/belly-2305346_1280.jpg'; this.onerror=null;">
+                        <div class="absolute top-4 left-4 bg-success text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            ORGANIC
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-text-primary mb-2">Mixed Salad</h3>
+                        <p class="text-text-secondary text-sm mb-4">Organic mixed greens - ready to eat</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-primary">$6.99</span>
+                            </div>
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <span class="text-text-secondary ml-1">4.6</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-primary-600 transition-colors">
+                            <i class="fas fa-plus mr-2"></i>Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="offers.html" class="btn-secondary text-lg px-8 py-4 inline-flex items-center">
+                    View All Deals <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Testimonials -->
+    <section class="py-20 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-text-primary mb-6 heading-poppins">What Our Customers Say</h2>
+                <p class="text-xl text-text-secondary max-w-2xl mx-auto">Real experiences from real customers who love FreshCart</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-subtle hover:shadow-elevated transition-all duration-300">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1592831383329-23d79a212006" 
+                             alt="Sarah Johnson customer photo" 
+                             class="w-16 h-16 rounded-full object-cover mr-4"
+                             onerror="this.src='https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        <div>
+                            <h4 class="font-semibold text-text-primary">Sarah Johnson</h4>
+                            <p class="text-text-secondary text-sm">Working Mom</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-text-secondary italic">"FreshCart has been a lifesaver! The 12-minute delivery is incredible, and the produce is always fresh. Perfect for busy weekdays when I need groceries fast."</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-subtle hover:shadow-elevated transition-all duration-300">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1690145486049-7cea8f7b361c" 
+                             alt="Michael Chen customer photo" 
+                             class="w-16 h-16 rounded-full object-cover mr-4"
+                             onerror="this.src='https://images.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg'; this.onerror=null;">
+                        <div>
+                            <h4 class="font-semibold text-text-primary">Michael Chen</h4>
+                            <p class="text-text-secondary text-sm">Tech Professional</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-text-secondary italic">"The app is so intuitive and the delivery tracking is spot-on. I love how I can get fresh ingredients for dinner delivered before I even get home from work."</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-subtle hover:shadow-elevated transition-all duration-300">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1692897432776-1fab0c5c2f4d" 
+                             alt="Emma Rodriguez customer photo" 
+                             class="w-16 h-16 rounded-full object-cover mr-4"
+                             onerror="this.src='https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        <div>
+                            <h4 class="font-semibold text-text-primary">Emma Rodriguez</h4>
+                            <p class="text-text-secondary text-sm">Health Enthusiast</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-text-secondary italic">"The organic selection is amazing and everything arrives perfectly fresh. The quality guarantee gives me confidence in every order. Highly recommended!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-20 bg-primary">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 heading-poppins">Stay Fresh with FreshCart</h2>
+            <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">Get exclusive deals, new product alerts, and fresh recipes delivered to your inbox</p>
+            
+            <div class="max-w-md mx-auto">
+                <div class="flex gap-2">
+                    <input type="email" 
+                           placeholder="Enter your email address" 
+                           class="flex-1 px-6 py-4 rounded-lg border-0 focus:ring-4 focus:ring-white/20 transition-all">
+                    <button class="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        Subscribe
+                    </button>
+                </div>
+                <p class="text-white/80 text-sm mt-4">
+                    <i class="fas fa-lock mr-1"></i>We respect your privacy. Unsubscribe anytime.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <!-- Company Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <svg class="h-10 w-10 text-primary mr-3" viewBox="0 0 40 40" fill="currentColor">
+                            <path d="M20 2L35 10v20L20 38 5 30V10L20 2z"/>
+                            <path d="M15 18h10v2H15zm0 4h10v2H15zm0 4h6v2h-6z" fill="white"/>
+                        </svg>
+                        <span class="text-2xl font-bold text-primary heading-poppins">FreshCart</span>
+                    </div>
+                    <p class="text-white/80 mb-6 max-w-md">
+                        Your trusted partner for ultra-fast grocery delivery. Fresh, quality groceries delivered to your doorstep in minutes.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="bg-white/10 p-3 rounded-full hover:bg-white/20 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="javascript:void(0)" class="bg-white/10 p-3 rounded-full hover:bg-white/20 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="javascript:void(0)" class="bg-white/10 p-3 rounded-full hover:bg-white/20 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="javascript:void(0)" class="bg-white/10 p-3 rounded-full hover:bg-white/20 transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-semibold text-white mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="homepage.html" class="text-white/80 hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="products.html" class="text-white/80 hover:text-primary transition-colors">Products</a></li>
+                        <li><a href="offers.html" class="text-white/80 hover:text-primary transition-colors">Offers</a></li>
+                        <li><a href="about.html" class="text-white/80 hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="text-white/80 hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h3 class="font-semibold text-white mb-6">Support</h3>
+                    <ul class="space-y-3">
+                        <li><a href="javascript:void(0)" class="text-white/80 hover:text-primary transition-colors">Help Center</a></li>
+                        <li><a href="javascript:void(0)" class="text-white/80 hover:text-primary transition-colors">Delivery Info</a></li>
+                        <li><a href="javascript:void(0)" class="text-white/80 hover:text-primary transition-colors">Return Policy</a></li>
+                        <li><a href="javascript:void(0)" class="text-white/80 hover:text-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="javascript:void(0)" class="text-white/80 hover:text-primary transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/20 pt-8 text-center">
+                <p class="text-white/80">© 2025 FreshCart. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white p-4 rounded-full shadow-elevated hover:bg-primary-600 transition-all duration-300 opacity-0 invisible">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        // Preloader
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0';
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 300);
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            const isOpen = mobileMenu.style.transform === 'translateY(0px)';
+            
+            if (isOpen) {
+                mobileMenu.style.transform = 'translateY(-100%)';
+                mobileMenu.style.opacity = '0';
+            } else {
+                mobileMenu.style.transform = 'translateY(0px)';
+                mobileMenu.style.opacity = '1';
+            }
+        });
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                navbar.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-elevated');
+            } else {
+                navbar.classList.remove('shadow-elevated');
+            }
+        });
+
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+                backToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+                backToTopBtn.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add to Cart Animation
+        document.querySelectorAll('button').forEach(button => {
+            if (button.textContent.includes('Add to Cart')) {
+                button.addEventListener('click', function() {
+                    const originalText = this.innerHTML;
+                    this.innerHTML = '<i class="fas fa-check mr-2"></i>Added!';
+                    this.classList.add('bg-success');
+                    this.classList.remove('bg-primary', 'hover:bg-primary-600');
+                    
+                    setTimeout(() => {
+                        this.innerHTML = originalText;
+                        this.classList.remove('bg-success');
+                        this.classList.add('bg-primary', 'hover:bg-primary-600');
+                    }, 2000);
+                });
+            }
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.card, .group').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(el);
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>
